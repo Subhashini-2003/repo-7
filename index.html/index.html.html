@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andhra Pradesh Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .recipe-card {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;z
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: left;
+            max-height: 80%; /* Limit the height of the modal */
+            overflow-y: auto; /* Add a vertical scrollbar if the content is too long */
+        }
+        .modal-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .modal-body {
+            margin-bottom: 20px;
+        }
+        .close-btn {
+            text-align: right;
+            cursor: pointer;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+<h1 style="text-align: center; margin-top: 20px;">Andhra Pradesh Recipes</h1>
+<div style="text-align: center;">
+  <button onclick="showRecipes()" style="margin: 20px; padding: 10px 20px; font-size: 1em; cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 5px;">Show Recipes</button>
+</div>
+<div id="recipesContainer" style="display: none;">
+<div class="container">
+        <!-- Recipe Card 1 -->
+        <div class="recipe-card" onclick="openModal('recipe1')">
+            <img src="andhra-recipe1.jpg" alt="Recipe 1"> <!-- Ensure the image file is correct or provide a full path -->
+        </div>
+
+        <!-- Recipe Card 2 -->
+        <div class="recipe-card" onclick="openModal('recipe2')">
+            <img src="andhra-recipe2.jpg" alt="Recipe 2">
+        </div>
+
+        <!-- Recipe Card 3 -->
+        <div class="recipe-card" onclick="openModal('recipe3')">
+            <img src="andhra-recipe3.jpg" alt="Recipe 3">
+        </div>
+        
+	<!-- Recipe Card 4 -->
+        <div class="recipe-card" onclick="openModal('recipe4')">
+            <img src="andhra-recipe4.jpg" alt="Recipe 4">
+        </div>
+
+	<!-- Recipe Card 5 -->
+        <div class="recipe-card" onclick="openModal('recipe5')">
+            <img src="andhra-recipe5.jpg" alt="Recipe 5">
+        </div>
+
+	<!-- Recipe Card 6 -->
+        <div class="recipe-card" onclick="openModal('recipe6')">
+            <img src="andhra-recipe6.jpg" alt="Recipe 6">
+        </div>
+
+	<!-- Recipe Card 7 -->
+        <div class="recipe-card" onclick="openModal('recipe7')">
+            <img src="andhra-recipe7.jpg" alt="Recipe 7">
+        </div>
+
+	<!-- Recipe Card 8 -->
+        <div class="recipe-card" onclick="openModal('recipe8')">
+            <img src="andhra-recipe8.jpg" alt="Recipe 8">
+        </div>
+
+	<!-- Recipe Card 9 -->
+        <div class="recipe-card" onclick="openModal('recipe9')">
+            <img src="andhra-recipe9.jpg" alt="Recipe 9">
+        </div>
+
+	<!-- Recipe Card 10 -->
+        <div class="recipe-card" onclick="openModal('recipe10')">
+            <img src="andhra-recipe10.jpg" alt="Recipe 10">
+        </div>
+
+	<!-- Recipe Card 11 -->
+        <div class="recipe-card" onclick="openModal('recipe11')">
+            <img src="andhra-recipe11.jpg" alt="Recipe 11">
+        </div>
+
+	<!-- Recipe Card 12 -->
+        <div class="recipe-card" onclick="openModal('recipe12')">
+            <img src="andhra-recipe12.jpg" alt="Recipe 12">
+        </div>
+
+	<!-- Recipe Card 13 -->
+        <div class="recipe-card" onclick="openModal('recipe13')">
+            <img src="andhra-recipe13.jpg" alt="Recipe 13">
+        </div>
+
+	<!-- Recipe Card 14 -->
+        <div class="recipe-card" onclick="openModal('recipe14')">
+            <img src="andhra-recipe14.jpg" alt="Recipe 14">
+        </div>
+
+	<!-- Recipe Card 15 -->
+        <div class="recipe-card" onclick="openModal('recipe15')">
+            <img src="andhra-recipe15.jpg" alt="Recipe 15">
+        </div>
+
+	<!-- Recipe Card 16 -->
+        <div class="recipe-card" onclick="openModal('recipe16')">
+            <img src="andhra-recipe16.jpg" alt="Recipe 16">
+        </div>
+
+	<!-- Recipe Card 17 -->
+        <div class="recipe-card" onclick="openModal('recipe17')">
+            <img src="andhra-recipe17.jpg" alt="Recipe 17">
+        </div>
+
+	<!-- Recipe Card 18 -->
+        <div class="recipe-card" onclick="openModal('recipe18')">
+            <img src="andhra-recipe18.jpg" alt="Recipe 18">
+        </div>
+
+	<!-- Recipe Card 19 -->
+        <div class="recipe-card" onclick="openModal('recipe19')">
+            <img src="andhra-recipe19.jpg" alt="Recipe 19">
+        </div>
+
+	<!-- Recipe Card 20 -->
+        <div class="recipe-card" onclick="openModal('recipe20')">
+            <img src="andhra-recipe20.jpg" alt="Recipe 20">
+        </div>
+	
+	<!-- Recipe Card 21 -->
+        <div class="recipe-card" onclick="openModal('recipe21')">
+            <img src="andhra-recipe21.jpg" alt="Recipe 21">
+        </div>
+
+	<!-- Recipe Card 22 -->
+        <div class="recipe-card" onclick="openModal('recipe22')">
+            <img src="andhra-recipe22.jpg" alt="Recipe 22">
+        </div>
+
+	<!-- Recipe Card 23 -->
+        <div class="recipe-card" onclick="openModal('recipe23')">
+            <img src="andhra-recipe23.jpg" alt="Recipe 23">
+        </div>
+
+	<!-- Recipe Card 24 -->
+        <div class="recipe-card" onclick="openModal('recipe24')">
+            <img src="andhra-recipe24.jpg" alt="Recipe 24">
+        </div>
+
+	<!-- Recipe Card 25 -->
+        <div class="recipe-card" onclick="openModal('recipe25')">
+            <img src="andhra-recipe25.jpg" alt="Recipe 25">
+        </div>
+
+	<!-- Recipe Card 26 -->
+        <div class="recipe-card" onclick="openModal('recipe26')">
+            <img src="andhra-recipe26.jpg" alt="Recipe 26">
+        </div>
+
+	<!-- Recipe Card 27 -->
+        <div class="recipe-card" onclick="openModal('recipe27')">
+            <img src="andhra-recipe27.jpg" alt="Recipe 27">
+        </div>
+
+	<!-- Recipe Card 28 -->
+        <div class="recipe-card" onclick="openModal('recipe28')">
+            <img src="andhra-recipe28.jpg" alt="Recipe 28">
+        </div>
+
+	<!-- Recipe Card 29 -->
+        <div class="recipe-card" onclick="openModal('recipe29')">
+            <img src="andhra-recipe29.jpg" alt="Recipe 29">
+        </div>
+
+	<!-- Recipe Card 30 -->
+        <div class="recipe-card" onclick="openModal('recipe30')">
+            <img src="andhra-recipe30.jpg" alt="Recipe 30">
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 1 -->
+    <div id="recipe1" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe1')">&times;</div>
+            <div class="modal-header">Recipe 1: Biryani</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>2 cups basmati rice</li>
+                    <li>1 pound meat (chicken, mutton, or fish), cut into 2-inch pieces</li>
+                    <li>1 large onion, thinly sliced </li>
+                    <li>2 tablespoons ginger-garlic paste</li>
+                    <li>1 teaspoon turmeric powder</li>
+                    <li>1 teaspoon red chili powder</li>
+                    <li>1 teaspoon cumin powder</li>
+                    <li>1 teaspoon garam masala</li>   
+                    <li>1/2 cup yogurt</li>
+                    <li>1/4 cup chopped fresh mint leaves</li>
+                    <li>1/4 cup chopped fresh cilantro</li>
+                    <li>4 tablespoons ghee or vegetable oil</li>
+                    <li>salt to taste</li>
+                    <li>A few strands of saffron, soaked in 2 tablespoons of warm milk (optional, for color and flavor)</li>
+                    <li>water</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the Rice:Wash the basmati rice thoroughly under running water until the water runs clear.Soak the rice in enough water to cover it for at least 30 minutes. Drain the water before cooking. </p>
+                <p><strong>Step 2:</strong>Marinate the Meat:In a large, turmeric powder, red chili powder, cumin powder, garam masala, yogurt, mint leaves, cilantro, and salt.Mix well and marinate for at least 30 minutes, or up to 4 hours in the refrigerator. </p>
+                <p><strong>Step 3:</strong>Cook the Meat:Heat ghee or oil in a heavy-bottomed pot or Dutch oven over medium heat.Add the sliced onions and fry until golden brown and crisp. Remove half of the fried onions and set aside for layering.Add the marinated meat to the pot and cook over medium-high heat until it is browned on all sides.Add 1/2 cup of water, cover the pot, and cook over low heat until the meat is cooked through and tender. This may take 20-30 minutes, depending on the type of meat. Make sure there is some gravy left in the pot. </p>
+                <p><strong>Step 4:</strong>Cook the Rice:While the meat is cooking, bring 4 cups of water to a boil in a separate pot. Add salt to taste.Add the drained rice to the boiling water and cook until it is about 70-80% cooked. The rice should still have a slight bite to it.Drain the rice and set aside.</p>
+                <p><strong>step 5:</strong>Layer the Biryani:In the pot with the cooked meat, add a layer of half of the partially cooked rice.   Sprinkle some of the reserved fried onions, chopped mint, and cilantro over the rice.Add the remaining rice on top.Pour the saffron milk over the rice (if using).Garnish with the remaining fried onions, mint, ancilantro.</p>
+                <p><strong>step 6:</strong>Dum Cooking (Steaming):Cover the pot tightly with a lid. You can seal the edges of the lid with dough or aluminum foil to trap the steam.Cook the biryani on low heat for 15-20 minutes. This process, called "dum cooking," allows the flavors to meld together.Alternatively, you can preheat an oven to 300°F (150°C) and bake the covered pot for 20-25 minutes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 2 -->
+    <div id="recipe2" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe2')">&times;</div>
+            <div class="modal-header">Recipe 2 fried rice</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>2 cups cooked rice </li>
+                    <li>1 tablespoon vegetable oil, plus 2 tablespoons for cooking</li>
+                    <li>1 small onion, chopped C</li>
+		    <li>1 cup mixed vegetables (such as carrots, peas, and green beans), chopped</li>
+		    <li>1 cup mixed vegetables (such as carrots, peas, and green beans), chopped</li>
+                    <li>2-3 tablespoons soy sauce, or to taste</li>
+		    <li>1 teaspoon sesame oil (optional)</li>
+		    <li>Salt and pepper to taste</li>
+
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the rice: If you don't have day-old rice, cook fresh rice and spread it on a baking sheet to cool completely. This will help prevent the rice from clumping</p>
+                <p><strong>Step 2:</strong>Scramble the eggs: Heat 1 tablespoon of vegetable oil in a wok or large skillet over medium heat. Pour in the beaten eggs and cook, stirring, until scrambled and set. Remove the eggs from the pan and set aside.</p>
+                <p><strong>Step 3:</strong>Sauté the vegetables: Add the remaining 2 tablespoons of vegetable oil to the wok or skillet over medium-high heat. Add the chopped onion and cook until softened, about 2-3 minutes. Add the minced garlic and mixed vegetables and cook for another 3-5 minutes, until the vegetables are tender-crisp.</p>
+		<p><strong>step 4:</strong>Add the rice and seasonings: Add the cooked rice to the wok or skillet and break up any clumps with a spatula. Stir-fry for 2-3 minutes. Pour in the soy sauce and sesame oil (if using) and toss to coat the rice and vegetables evenly. Season with salt and pepper to taste.</p>
+		<p><srong>step 5:</strong>Add the rice and seasonings: Add the cooked rice to the wok or skillet and break up any clumps with a spatula. Stir-fry for 2-3 minutes. Pour in the soy sauce and sesame oil (if using) and toss to coat the rice and vegetables evenly. Season with salt and pepper to taste.
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 3 -->
+    <div id="recipe3" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe3')">&times;</div>
+            <div class="modal-header">Recipe 3 tomato rice</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup rice (basmati or any other long-grain rice)</li>
+     		    <li>2-3 ripe tomatoes, finely chopped or pureed</li>
+		    <li>1 medium onion, thinly sliced</li>  
+	            <li>1-2 green chilies, slit (optional)</li>
+		    <li>1 tablespoon ginger-garlic paste</li>   
+		    <li>1/2 teaspoon turmeric powder</li>
+		    <li>1 teaspoon red chili powder (adjust to taste)</li>
+		    <li>1 teaspoon garam masala</li>
+		    <li>1/2 teaspoon cumin seeds</li>   
+		    <li>1/4 teaspoon mustard seeds</li>
+		    <li>A few curry leaves</li>   
+		    <li>2 tablespoons oil or ghee</li> 
+	    	    <li>Salt to taste</li>
+		    <li>Fresh coriander leaves, for garnish</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Wash the rice thoroughly and soak it for 30 minutes. Drain and set aside.Heat oil or ghee in a pot or pressure cooker. Add cumin seeds and mustard seeds. Let them splutter.Add curry leaves and green chilies (if using). Saute for a few seconds.Add sliced onions and saute until they turn golden brown.</p>
+                <p><strong>Step 2:</strong>Add ginger-garlic paste and saute for a minute until the raw smell disappears.Add chopped or pureed tomatoes, turmeric powder, red chili powder, and salt. Cook until the tomatoes are mushy and the oil starts to separate from the mixture.Add garam masala and mix well.Add the soaked and drained rice. Mix gently to coat the rice with the tomato mixture.</p>
+                <p><strong>Step 3:</strong>Add water according to the rice-to-water ratio for your chosen cooking method (usually 2 cups of water for 1 cup of rice if cooking in a pot, slightly less if using a pressure cooker).Bring the water to a boil. Cover the pot and simmer on low heat until all the water is absorbed and the rice is cooked.
+If using a pressure cooker, close the lid and cook for one whistle on medium heat. Let the pressure release naturally.
+Once the rice is cooked, gently fluff it with a fork</p>
+                <p><strong>step 4:</strong>Garnish with fresh coriander leaves.Serve hot with raita (yogurt with vegetables), papad, or a simple curry.</p>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal for Recipe 4 -->
+    <div id="recipe4" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe4')">&times;</div>
+            <div class="modal-header">Recipe 4 kichidi </div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1/2 cup rice (short-grain rice is often preferred)</li>
+                    <li>1/2 cup moong dal (split yellow lentils)</li>   
+		    <li>3 1/2 to 4 cups water (adjust for desired consistency)</li>
+		    <li>1/2 teaspoon turmeric powder</li>
+		    <li>Salt to taste</li>
+		    <li>1-2 tablespoons ghee (clarified butter) or oil</li>   
+		    <li>1 teaspoon cumin seeds</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Rinse:Rinse the rice and moong dal thoroughly in water until the water runs clear.</p>
+                <p><strong>Step 2:</strong>Pressure Cooker:Add the rinsed rice, moong dal, water, turmeric powder, and salt to the pressure cooker.Mix well.Close the lid and pressure cook for about 3-4 whistles, or until the dal and rice are cooked and soft.Let the pressure release naturally</p>
+                <p><strong>Step 3:</strong>Pot:Add the rinsed rice, moong dal, water, turmeric powder, and salt to a pot.Bring to a boil, then reduce heat and simmer until the rice and dal are soft and mushy. This will take longer than using a pressure cooker. ...</p>
+		<p><strong>step 4:</strong>Tempering:Heat ghee or oil in a small pan.Add cumin seeds and let them splutter.If using, add asafoetida.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 5 -->
+    <div id="recipe5" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe5')">&times;</div>
+            <div class="modal-header">Recipe 5 pulao</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 1/2 cups Basmati rice (long-grain)</li>
+                    <li>1 medium onion, thinly sliced</li>
+                    <li>1 cup mixed vegetables (carrots, peas, beans, potatoes, cauliflower, etc.), chopped</li>
+		    <li>1/2 cup paneer (Indian cottage cheese) cubes</li>
+		    <li>1 bay leaf</li>   
+		    <li>1 inch cinnamon stick</li>
+		    <li>3-4 cloves</li>
+		    <li>3-4 cardamom pods</li>   
+		    <li>1 teaspoon cumin seeds</li>
+		    <li>1 teaspoon ginger-garlic paste</li>   
+		    <li>1/2 teaspoon turmeric powder</li>   
+		    <li>1/2 teaspoon garam masala</li>
+		    <li>salt to taste.</li>
+		    <li>2 tablespoons fresh mint leaves, chopped</li>
+		    <li>2 tablespoons fresh coriander leaves, chopped</li>
+		    <li>2-3 tablespoons ghee or vegetable oil</li>
+		    <li>2 1/2 to 3 cups water (adjust based on rice type)</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Rice Preparation:Rinse the basmati rice thoroughly under running water until the water runs clear.Soak the rice in water for 20-30 minutes. This helps the rice cook evenly and become fluffy.Drain the soaked rice.</p>
+                <p><strong>Step 2:</strong>Tempering the Spices:Heat ghee or oil in a heavy-bottomed pot or pressure cooker.Add the whole spices (bay leaf, cinnamon, cloves, cardamom, cumin seeds) and let them splutter.Add the sliced onions and sauté until golden brown.Add the ginger garlic paste, and saute for another minute.</p>
+                <p><strong>Step 3:</strong>Cooking Vegetables:Add the chopped vegetables and sauté for a few minutes until they are slightly tender.If using paneer, add the paneer and lightly fry it.</p>
+<p><strong>step 4:</strong>Adding Rice and Spices:Add the drained rice to the pot and mix gently, ensuring the rice is coated with the spices and vegetables.Add the turmeric powder, garam masala, and salt. Mix well.</p>
+<p><strong>step 5:</strong>Adding Water and Cooking:Pour in the water. The general rule is to use a 1:1.5 or 1:2 ratio of rice to water, but adjust based on your rice type.Bring the mixture to a boil.Reduce the heat to low, cover the pot tightly, and simmer for 15-20 minutes, or until the rice is cooked and the water is absorbed.   
+If using a pressure cooker, close the lid and cook for 1-2 whistles on medium heat. Let the pressure release naturally.</p>
+<p><strong>step 6:</strong>Garnishing and Serving:Once cooked, gently fluff the rice with a fork.Garnish with chopped mint and coriander leaves.Serve the pulao hot with raita or a side dish of your choice.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 6 -->
+    <div id="recipe6" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe6')">&times;</div>
+            <div class="modal-header">Recipe 6 veg manchuria</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup finely chopped mixed vegetables (cabbage, carrots, beans, bell peppers)</li>
+		    <li>2-3 tablespoons all-purpose flour (maida)</li>
+		    <li>2-3 tablespoons cornstarch</li>
+		    <li>1 teaspoon ginger-garlic paste</li>
+		    <li>Salt and pepper to taste</li>
+		    <li>Oil for deep frying</li>
+		    <li>For the Manchurian Sauce:</li>
+		    <li>2 tablespoons oil</li>
+		    <li>1 tablespoon finely chopped ginger</li>
+		    <li>1 tablespoon finely chopped garlic</li>
+		    <li>2-3 green chilies, finely chopped (adjust to your spice preference)</li>
+		    <li>1 medium onion, diced</li>
+		    <li>1 bell pepper (capsicum), diced</li>
+		    <li>2 tablespoons soy sauce</li>
+		    <li>1-2 tablespoons tomato ketchup</li>   
+		    <li>1 tablespoon red chili sauce</li>
+		    <li>1 teaspoon vinegar</li>
+		    <li>1 cup vegetable broth or water</li>
+		    <li>1-2 tablespoons cornstarch mixed with 2-3 tablespoons water (cornstarch slurry)</li>
+		    <li>Spring onion greens, for garnish</li>
+               </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Preparing the Vegetable Balls:In a large bowl, combine the finely chopped vegetables, ginger-garlic paste, salt, and pepper.
+Add the all-purpose flour and cornstarch. Mix well until the vegetables are coated and the mixture can be formed into small balls. If the mixture is too dry, add a little water. Heat oil in a deep frying pan or wok.Shape the vegetable mixture into small balls.Deep fry the balls until golden brown and crispy.Drain the fried balls on paper towels to remove excess oil.</p>
+                <p><strong>Step 2:</strong>Preparing the Manchurian Sauce:Heat oil in a wok or pan.Add the chopped ginger, garlic, and green chilies. Sauté for a minute until fragrant.Add the diced onion and bell pepper. Sauté until the onions are translucent.Add the soy sauce, tomato ketchup, red chili sauce, and vinegar. Mix well.
+Pour in the vegetable broth or water and bring to a simmer.Add the cornstarch slurry to thicken the sauce. Stir continuously to prevent lumps.Simmer the sauce until it thickens to your desired consistency</p>
+                <p><strong>Step 3:</strong>Combining the Balls and Sauce:Add the fried vegetable balls to the Manchurian sauce.Toss gently to coat the balls evenly with the sauce.Cook for a few minutes until the balls are heated through.</p>
+		<p><strong>Step 4:</strong>Garnishing and Serving:Garnish with chopped spring onion greens.Serve hot with fried rice or noodles.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 7 -->
+    <div id="recipe7" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe7')">&times;</div>
+            <div class="modal-header">Recipe 7 palak paneer</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 kg fresh spinach leaves</li>
+		    <li>2-3 green chilies</li>
+		    <li>1 inch ginger</li>
+		    <li>2-3 cloves of garlic</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Wash the spinach leaves thoroughly.</p>
+                <p><strong>Step 2:</strong>Blanch the spinach: Boil water in a pot, add the spinach leaves, and cook for 2-3 minutes until wilted.</p>
+                <p><strong>Step 3:</strong>Immediately transfer the blanched spinach to ice-cold water to retain its vibrant green color.</p>
+		<p><strong>step 4:</strong>Drain the spinach and blend it with green chilies, ginger, and garlic to a smooth puree.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 8 -->
+    <div id="recipe8" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe8')">&times;</div>
+            <div class="modal-header">Recipe 8 pulihora</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 1/2 cups rice (short-grain rice is preferred)</li>   
+		    <li>Water, as needed</li>
+		    <li>1/2 tsp Turmeric powder</li>
+                    <li>Lemon-sized ball of tamarind</li>
+		    <li>1/2 cup water</li>
+                    <li>3-4 tablespoons oil (sesame oil is traditional)</li>
+		    <li>1 teaspoon mustard seeds</li>
+		    <li>1 teaspoon cumin seeds</li>   
+		    <li>1 tablespoon chana dal (split chickpeas)</li>   
+		    <li>1 tablespoon urad dal (split black gram)</li>   
+		    <li>1/4 cup peanuts</li>   
+		    <li>2-3 dried red chilies, broken</li>   
+		    <li>2-3 green chilies, slit</li>   
+		    <li>1 sprig curry leaves</li>   
+		    <li>1/4 teaspoon asafoetida (hing)</li>   
+		    <li>1/2 teaspoon turmeric powder</li>
+		    <li>Salt to taste</li>   
+		    <li>Optional: A small piece of jaggery</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the Rice:Rinse the rice thoroughly.Cook the rice until it's done, but make sure it's not mushy. Grains should be separate. Add turmeric powder to the rice water while cooking to give the rice a nice yellow tint.Spread the cooked rice on a wide plate to cool completely.</p>
+                <p><strong>Step 2:</strong>Extract Tamarind Pulp:Soak the tamarind in warm water for about 15-20 minutes.Squeeze the tamarind to extract the thick pulp. Strain it to remove any fibers or seeds.</p>
+                <p><strong>Step 3:</strong>Prepare the Tamarind Mixture:Heat the oil in a pan.Add mustard seeds and cumin seeds. When they splutter, add chana dal, urad dal, and peanuts. Fry until the lentils turn golden brown.Add dried red chilies, green chilies, curry leaves, and asafoetida. Sauté for a few seconds.Add the tamarind pulp, turmeric powder, and salt. If you're using jaggery, add it now.Cook the tamarind mixture until it thickens and the oil separates. Stir occasionally to prevent it from sticking to the pan.Allow this mixture to cool down.</p>
+		<p><strong>step 4:</strong>Combine Rice and Tamarind Mixture:Once the tamarind mixture and the rice have cooled, gently mix them together.Ensure the rice is evenly coated with the tamarind mixture.</p>
+		<p><strong>step 5:</strong>Serve the pulihora at room temperature. It's often accompanied by papad or pickles.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 9 -->
+    <div id="recipe9" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe9')">&times;</div>
+            <div class="modal-header">Recipe 9 carrot rice</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 1/2 cups basmati rice (or any long-grain rice)</li>
+                    <li>2-3 medium carrots, grated</li>
+                    <li>1 medium onion, finely chopped</li>
+		    <li>1 teaspoon cumin seeds</li>
+		    <li>1/2 teaspoon mustard seeds (optional)</li>
+		    <li>1/2 teaspoon turmeric powder</li>
+		    <li>1/2 teaspoon garam masala (optional)</li>
+		    <li>spices like, cinnamon, cardamon, and bay leaves can be used for extra flavor</li>
+		    <li>2-3 tablespoons vegetable oil or ghee</li>
+		    <li>Salt to taste</li>
+		    <li>Fresh coriander leaves, chopped (for garnish)</li>   
+		    <li>Cashews or peanuts (optional)</li>   
+		    <li>water</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the Rice:Rinse the rice thoroughly under running water until the water runs clear.Cook the rice according to your preferred method (stovetop or rice cooker). Ensure the rice is cooked but not mushy.Once cooked, fluff the rice with a fork and set it aside.</p>
+                <p><strong>Step 2:</strong>Tempering:Heat oil or ghee in a pan or wok.Add cumin seeds and mustard seeds (if using), and let them splutter.Add cashews or peanuts if you like them in your rice, and lightly brown them.Add the finely chopped onions and sauté until golden brown.Add the grated carrots and sauté for a few minutes until they are slightly tender.If using additional whole spices such as cinnamon, cardamom or bay leaves, add them with the carrots.</p>
+                <p><strong>Step 3:</strong>Adding Spices and Rice:Add turmeric powder, garam masala (if using), and salt. Mix well.Add the cooked rice to the pan and gently mix everything together, ensuring the rice is coated with the carrot mixture.</p>
+		<p><strong>step 4:</strong>Final Touches:Cook for a few minutes until the rice is heated through.Garnish with chopped fresh coriander leaves.If preferred, a squeeze of lemon juice can be added before serving.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 10 -->
+    <div id="recipe10" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe10')">&times;</div>
+            <div class="modal-header">Recipe 10 frish fry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>500g fish fillets (cod, tilapia, catfish, or any firm white fish)</li>
+		    <li>Cut into desired size pieces</li>
+                    <li>1 tablespoon ginger-garlic paste</li>
+		    <li>1 tablespoon lemon juice or vinegar</li>
+		    <li>1 teaspoon turmeric powder</li>
+		    <li>1 teaspoon red chili powder (adjust to your spice preference)</li>
+		    <li>1/2 teaspoon garam masala (optional)</li>
+		    <li>Salt to taste</li>
+                    <li>1 cup all-purpose flour or rice flour (for a crispier coating)</li>
+		    <li> 1/2 cup of corn flour to add to the all purpose flour</li>
+		    <li> bread crumbs can be added for extra crispiness.</li>
+		    <li>Enough oil for deep frying</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Marinate the Fish:In a bowl, combine the ginger-garlic paste, lemon juice, turmeric powder, red chili powder, garam masala (if using), and salt.Coat the fish pieces thoroughly with the marinade.Let the fish marinate for at least 30 minutes, or longer for more intense flavor.</p>
+                <p><strong>Step 2:</strong>Prepare the Coating:In a shallow dish, spread the flour or rice flour. If you are using corn flour or bread crumbs, mix them in with the flour.</p>
+                <p><strong>Step 3:</strong>Coat the Fish:Take each marinated fish piece and coat it evenly with the flour mixture.Ensure the fish is completely covered.</p>
+		<p><strong>step 4:</strong>Fry the Fish:Heat the oil in a deep frying pan or wok over medium heat.Carefully place the coated fish pieces into the hot oil.
+Fry until golden brown and crispy on all sides.Remove the fried fish and drain on paper towels to remove excess oil.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 11 -->
+    <div id="recipe11" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe11')">&times;</div>
+            <div class="modal-header">Recipe 11 mutton fry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>500g mutton, cut into small, bite-sized pieces (boneless or with small bones)</li>
+		    <li>1 tablespoon ginger-garlic paste</li>
+		    <li>1 teaspoon turmeric powder</li>
+		    <li>1-2 teaspoons red chili powder (adjust to your spice preference)</li>
+		    <li>1 teaspoon coriander powder</li>
+		    <li>1/2 teaspoon garam masala (optional)</li>
+		    <li>2-3 tablespoons oil (vegetable or coconut oil)</li>
+		    <li>Salt to taste</li>
+		    <li> Curry leaves and green chilies for added flavor during the final fry.</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Marinate the Mutton:In a bowl, combine the mutton pieces with ginger-garlic paste, turmeric powder, red chili powder, coriander powder, and salt.Mix thoroughly, ensuring the mutton is well-coated.Let the mutton marinate for at least 30 minutes, or longer for a deeper flavor.</p>
+                <p><strong>Step 2:</strong>Initial Cooking (Tenderizing):This step is crucial for tender mutton. You can use either a pressure cooker or a heavy-bottomed pot.Pressure Cooker: Add the marinated mutton to the pressure cooker with a very small amount of water (just enough to prevent burning). Cook for 3-4 whistles, or until the mutton is tender.Pot: Add the marinated mutton to the pot with a small amount of water. Cover and simmer over low heat until the mutton is tender. This will take longer than pressure cooking.Once the mutton is tender, if there is remaining water in the pot or pressure cooker, cook it off over medium heat until all the liquid evaporates.</p>
+                <p><strong>Step 3:</strong>The Actual Fry:Heat the oil in a pan or wok over medium-high heat.Add the cooked mutton pieces to the hot oil.Fry the mutton, stirring frequently, until it is well-browned and crispy on the edges.Optional: in the last few minutes of frying, add curry leaves and slit green chilies to the pan, and fry them with the mutton.If using, sprinkle the garam masala over the fried mutton and mix well.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 12 -->
+    <div id="recipe12" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe12')">&times;</div>
+            <div class="modal-header">Recipe 12 paneer biryani</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>250g paneer, cubed</li>
+		    <li>1/2 cup yogurt (curd)</li>
+		    <li>1 tablespoon ginger-garlic paste</li>
+		    <li>1 teaspoon red chili powder</li>
+		    <li>1/2 teaspoon turmeric powder</li>   
+		    <li>1 teaspoon garam masala</li>   
+		    <li>Salt to taste</li>                  
+		    <li>1 1/2 cups basmati rice</li>
+		    <li>Whole spices (2 bay leaves, 2-3 cardamom pods, 3-4 cloves, 1-inch cinnamon stick)</li>
+		    <li>Salt to taste</li>
+		    <li>2 medium onions, thinly sliced</li>   
+		    <li>2 tomatoes, chopped</li>
+		    <li>1/4 cup mint leaves, chopped</li>
+		    <li>1/4 cup coriander leaves, chopped</li>
+		    <li>2-3 green chilies, slit</li>
+		    <li>Saffron strands soaked in warm milk (optional)</li>   
+		    <li>Ghee or oil</li>  
+		    <li>Fried onions (birista) for garnish (optional)</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Marinate the Paneer:In a bowl, combine yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, and salt.
+Add the paneer cubes and mix gently.Marinate for at least 30 minutes.</p>
+                <p><strong>Step 2:</strong>Prepare the Rice:Rinse the basmati rice and soak it for 20-30 minutes.In a pot, bring water to a boil. Add the whole spices and salt.Drain the soaked rice and add it to the boiling water.Cook the rice until it's about 70-80% done. Drain and set aside.</p>
+                <p><strong>Step 3:</strong>Prepare the Biryani Base:Heat ghee or oil in a heavy-bottomed pot.Add the sliced onions and fry until golden brown.Add the chopped tomatoes and cook until they soften.Add the marinated paneer and cook for a few minutes.add the chopped mint and coriander leaves, and the slit green chillies </p>
+		<p><strong>step 4:</strong>Layer the Biryani:Layer half of the cooked rice over the paneer mixture.Sprinkle some fried onions (if using) and saffron milk (if using) over the rice.Layer the remaining rice over the top.Cover the pot tightly.</p>
+		<p><strong>step 5:</strong>Cook on Dum:Cook the biryani on low heat (dum) for 15-20 minutes, or until the rice is fully cooked.Alternatively, you can place the pot in a preheated oven.</p>
+		<p><strong>step 6:</strong>Garnish and Serve:Gently fluff the biryani with a fork.Garnish with remaining fried onions and coriander leaves.Serve hot with raita.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 13 -->
+    <div id="recipe13" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe13')">&times;</div>
+            <div class="modal-header">Recipe 13 natu kodi pulusu</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 kg country chicken (natu kodi), cut into medium pieces</li>
+		    <li>2 medium onions, finely chopped</li>
+		    <li>2-3 tomatoes, finely chopped</li>
+		    <li>1 tablespoon ginger-garlic paste</li>   
+		    <li>2-3 green chilies, slit</li>
+		    <li>1 sprig curry leaves</li>
+		    <li>1/4 cup tamarind pulp (extracted from a lemon-sized ball)</li>
+		    <li>2-3 tablespoons oil</li>  
+		    <li>1 teaspoon mustard seeds</li>  
+		    <li>1 teaspoon cumin seeds</li>   
+		    <li>1/2 teaspoon turmeric powder</li>   
+		    <li>2-3 teaspoons red chili powder (adjust to your spice preference)<li>
+		    <li>2 teaspoons coriander powder</li>
+		    <li>1/2 teaspoon garam masala</li>
+		    <li>Salt to taste</li>
+		    <li>Fresh coriander leaves, chopped (for garnish)</li>   
+		    <li>water</li>    
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Clean the chicken pieces thoroughly</p>
+                <p><strong>Step 2:</strong>Heat oil in a heavy-bottomed pot.Add mustard seeds and cumin seeds. When they splutter, add curry leaves and green chilies.   
+Add the finely chopped onions and sauté until golden brown.Add ginger-garlic paste and sauté for a minute until fragrant</p>
+                <p><strong>Step 3:</strong>Add the chicken pieces to the pot and sauté for a few minutes until they are lightly browned.Add the chopped tomatoes and cook until they soften.Add turmeric powder, red chili powder, coriander powder, and salt. Mix well.Add enough water to cover the chicken pieces. Bring it to a boil.</p>			<p><strong>step 4:</strong>Reduce the heat and simmer the chicken until it is tender. This may take some time, as country chicken tends to be tougher than regular chicken.Once the chicken is tender, add the tamarind pulp.Simmer for another 5-10 minutes, allowing the flavors to blend.Add the garam masala, and mix.</p>
+		<p><strong>step 5:</strong>Garnish with chopped fresh coriander leaves.Serve the natu kodi pulusu hot with rice or ragi sangati.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 14 -->
+    <div id="recipe14" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe14')">&times;</div>
+            <div class="modal-header">Recipe 14 soya keema masala</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup soya granules (also known as soya mince or soya chunks)</li>   
+		    <li>2 medium onions, finely chopped</li>
+		    <li>2 tomatoes, finely chopped</li>
+		    <li>1 tablespoon ginger-garlic paste</li>
+	            <li>2-3 green chilies, finely chopped</li>
+	            <li>1/2 cup peas (optional)</li>
+	            <li>1/4 cup chopped coriander leaves</li>
+	            <li>2-3 tablespoons oil</li>
+	            <li>1 teaspoon cumin seeds</li>   
+	            <li>1 bay leaf</li>   
+	            <li>1-inch cinnamon stick</li>   
+	            <li>3-4 cloves</li>
+		    <li>3-4 cardamom pods
+		    <li>1 teaspoon turmeric powder</li>   
+		    <li>1-2 teaspoons red chili powder (adjust to your taste)</li>
+		    <li>1-2 teaspoons coriander powder</li>  
+		    <li>1/2 teaspoon garam masala</li>
+		    <li>Salt to taste</li>
+		    <li>Water as required</li>
+		</ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Boil water in a pot.Add the soya granules and cook for 5-7 minutes, or until they soften.Drain the water and squeeze the soya granules to remove excess liquid.Set aside.</p>
+                <p><strong>Step 2:</strong>Heat oil in a pan or wok.Add cumin seeds, bay leaf, cinnamon stick, cloves, and cardamom pods.Let them splutter.Add the finely chopped onions and sauté until golden brown.</p>
+                <p><strong>Step 3:</strong>Add the ginger-garlic paste and green chilies. Sauté for a minute.Add the finely chopped tomatoes and cook until they soften and the oil separates from the masala.Add turmeric powder, red chili powder, coriander powder, and salt. Mix well.If using peas, add them now and cook for a few minutes.</p>
+		<p><strong>step 4:</strong>Add the squeezed soya granules to the pan and mix well with the masala.
+Add a little water (about 1/2 cup) to create a semi-dry gravy.Cover the pan and simmer for 5-7 minutes, allowing the flavors to blend.</p>
+		<p><strong>step 5:</strong>Add garam masala and mix well.Garnish with chopped coriander leaves.Cook for another minute.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 15 -->
+    <div id="recipe15" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe15')">&times;</div>
+            <div class="modal-header">Recipe 15 veg noodles</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>200g noodles (hakka noodles, chow mein noodles, or any long noodles)</li>
+		    <li>2-3 tablespoons oil (vegetable or sesame)</li>
+		    <li>1 medium onion, thinly sliced</li>
+		    <li>1 carrot, julienned</li>
+		    <li>1 bell pepper (capsicum), julienned<li>
+		    <li>1/2 cup cabbage, shredded</li>
+		    <li>1/2 cup beans, cut into small pieces</li>   
+		    <li>2-3 cloves garlic, minced</li>
+		    <li>1-inch ginger, grated</li>
+		    <li>2-3 green chilies, slit (optional)</li>  
+		    <li>2 tablespoons soy sauce</li>
+		    <li>1 tablespoon vinegar</li>
+		    <li>1 tablespoon chili sauce (optional)</li>   
+		    <li>Salt and pepper to taste</li>
+		    <li>Spring onion greens, chopped (for garnish)</li>    
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Boil water in a large pot.Add the noodles and cook according to package instructions, until al dente. Do not overcook.Drain the noodles and rinse them with cold water to stop the cooking process and prevent them from sticking together.Set aside.</p>
+                <p><strong>Step 2:</strong>Wash and cut all the vegetables into julienne strips or thin slices.</p>
+                <p><strong>Step 3:</strong>Heat oil in a wok or large frying pan over high heat.Add the minced garlic and grated ginger. Sauté for a few seconds until fragrant.If using, add the slit green chilies.</p>
+		<p><strong>Step 4:</strong>Add the sliced onions and sauté until translucent.Add the carrots, beans, and bell peppers. Sauté for a few minutes until slightly tender.Add the shredded cabbage and cook for another minute or two.The vegetables should retain some crispness.</p>
+		<p><strong>Step 5:</strong>Add the cooked noodles to the wok.Pour in the soy sauce, vinegar, and chili sauce (if using).Toss everything well to coat the noodles and vegetables with the sauces.Season with salt and pepper to taste.</p>
+		<p><strong>Step 6:</strong>Cook for another minute or two, stirring continuously, until everything is heated through.Garnish with chopped spring onion greens.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 16 -->
+    <div id="recipe16" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe16')">&times;</div>
+            <div class="modal-header">Recipe 16 prawns masala</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>500g prawns, cleaned and deveined</li>  
+		    <li>2 medium onions, finely chopped</li>
+		    <li>2 tomatoes, finely chopped</li>
+		    <li>1 tablespoon ginger-garlic paste</li>   
+		    <li>2-3 green chilies, slit</li>
+		    <li>1 sprig curry leaves</li>   
+		    <li>2-3 tablespoons oil (vegetable or coconut)</li>
+		    <li>1 teaspoon mustard seeds</li>   
+		    <li>1 teaspoon cumin seeds</li>
+		    <li>1/2 teaspoon turmeric powder</li>
+		    <li>1-2 teaspoons red chili powder (adjust to your spice preference)</li>
+		    <li>1-2 teaspoons coriander powder</li>
+		    <li>1/2 teaspoon garam masala</li>
+		    <li>Salt to taste</li>
+		    <li>Fresh coriander leaves, chopped (for garnish)</li>   
+		    <li>1/4 cup of coconut milk (optional)</li>   
+		    <li>1 tablespoon of lemon juice.</li>   
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Clean the prawns thoroughly and devein them.If desired, you can marinate the prawns with a little turmeric powder, red chili powder, and lemon juice for 15-20 minutes.</p>
+                <p><strong>Step 2:</strong>Heat oil in a pan or wok.Add mustard seeds and cumin seeds. When they splutter, add curry leaves and slit green chilies.   
+Add the finely chopped onions and sauté until golden brown.Add the ginger-garlic paste and sauté for a minute until fragrant.</p>
+                <p><strong>Step 3:</strong>Add the finely chopped tomatoes and cook until they soften and the oil separates from the masala.Add turmeric powder, red chili powder, coriander powder, and salt. Mix well.Cook the masala for a few minutes, stirring occasionally.</p>
+		<p><strong>Step 4:</strong>Add the prawns to the pan and mix well with the masala.Cook the prawns until they turn pink and are cooked through. Do not overcook, as they can become rubbery.Add the garam masala and mix well. ...</p>
+		<p><strong>Step 5:</strong>If using, add coconut milk and simmer for a few minutes.Add the lemon juice, and mix.Garnish with chopped fresh coriander leaves.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 17 -->
+    <div id="recipe17" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe17')">&times;</div>
+            <div class="modal-header">Recipe 17 masala pasta</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>250g pasta (penne, fusilli, or any short pasta)</li>
+		    <li>2 tablespoons olive oil or vegetable oil</li>
+		    <li>1 medium onion, finely chopped</li>  
+ 		    <li>1 bell pepper (capsicum), chopped</li>
+		    <li>1-2 tomatoes, finely chopped or 1/2 cup tomato puree</li>
+		    <li>1 tablespoon ginger-garlic paste</li>
+		    <li>2-3 green chilies, finely chopped (adjust to taste)</li>
+		    <li>1/2 cup peas (optional)</li>
+		    <li>1/2 teaspoon turmeric powder</li>   
+		    <li>1-2 teaspoons red chili powder (adjust to taste)</li>
+		    <li>1 teaspoon coriander powder</li>
+	      	    <li>1/2 teaspoon garam masala</li>   
+		    <li>1/4 cup fresh coriander leaves, chopped</li>
+		    <li>Salt to taste</li>
+		    <li>Water, as needed</li>
+ 		    <li>a splash of cream or coconut milk for added richness.</li>       
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Boil water in a large pot. Add salt and the pasta.Cook the pasta according to package directions, until al dente.Drain the pasta, reserving about 1/2 cup of the pasta water.</p>
+                <p><strong>Step 2:</strong>Heat oil in a pan or wok over medium heat.Add the finely chopped onions and sauté until golden brown.
+Add the ginger-garlic paste and green chilies. Sauté for a minute until fragrant.Add the chopped bell pepper and cook for a few minutes until slightly tender.</p>
+                <p><strong>Step 3:</strong>Add the chopped tomatoes or tomato puree. Cook until the tomatoes soften and the oil separates from the masala.Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for a minute.If using peas, add them now and cook until tender.</p>
+		<p><strong>Step 4:</strong>Add the cooked pasta to the pan.Toss well to coat the pasta with the masala.If the pasta seems dry, add a little of the reserved pasta water to create a saucier consistency. ...</p>
+		<p><strong>Step 5:</strong>Add garam masala and mix well.If you're using cream or coconut milk, add it now and simmer for a minute.Garnish with chopped fresh coriander leaves.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 18 -->
+    <div id="recipe18" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe18')">&times;</div>
+            <div class="modal-header">Recipe 18 goat head meat curry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 goat head, cleaned and cut into pieces</li>   
+		    <li>2-3 medium onions, finely chopped</li>
+		    <li>2-3 tomatoes, finely chopped</li>
+		    <li>1-2 tablespoons ginger-garlic paste</li>
+		    <li>2-3 green chilies, slit</li>
+		    <li>Curry leaves</li>
+		    <li>Oil (vegetable or coconut)</li>   
+		    <li>Turmeric powder</li>
+		    <li>Red chili powder</li>
+		    <li>Coriander powder</li>
+		    <li>Garam masala</li>
+		    <li>Whole spices (cinnamon, cardamom, cloves, bay leaves)</li>   
+		    <li>Salt to taste</li>
+		    <li>Fresh coriander leaves, chopped (for garnish)</li>
+		    <li>Coconut milk</li>
+		    <li>Tamarind pulp.</li>            
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Ensure the goat head meat is thoroughly cleaned.</p>
+                <p><strong>Step 2:</strong>Heat oil in a heavy-bottomed pot or pressure cooker.Add whole spices and let them splutter.Add chopped onions and sauté until golden brown.Add ginger-garlic paste and sauté until fragrant.Add the green chillies, and curry leaves.</p>
+                <p><strong>Step 3:</strong>Add the goat head meat pieces and brown them slightly.Add chopped tomatoes and cook until they soften.Add turmeric powder, red chili powder, coriander powder, and salt.Mix well.Add enough water to cover the meat.</p>
+		<p><strong>Step 4:</strong>Close the lid and cook for an extended period, as the meat requires significant time to tenderize.
+
+</p>
+		<p><strong>Step 5:</strong>Once the meat is tender, add garam masala.If using coconut milk, or tamarind pulp, add them at the end.Garnish with chopped coriander leaves.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 19 -->
+    <div id="recipe19" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe19')">&times;</div>
+            <div class="modal-header">Recipe 19 boti curry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>500g boti (goat or lamb tripe/intestines), cleaned and cut into small pieces</li>   
+		    <li>2-3 medium onions, finely chopped</li>
+		    <li>2-3 tomatoes, finely chopped or 1/2 cup tomato puree</li>
+		    <li>1-2 tablespoons ginger-garlic paste</li>
+		    <li>2-3 green chilies, slit</li>
+		    <li>1 sprig curry leaves</li>   
+		    <li>2-3 tablespoons oil (vegetable or coconut)</li>
+	  	    <li>1 teaspoon mustard seeds</li>
+		    <li>1 teaspoon cumin seeds</li> 
+		    <li>1/2 teaspoon turmeric powder</li>
+		    <li>1-2 teaspoons red chili powder (adjust to your spice preference)</li>
+		    <li>1-2 teaspoons coriander powder</li>
+		    <li>1/2 teaspoon garam masala</li>
+		    <li>Salt to taste</li>
+		    <li>Fresh coriander leaves, chopped (for garnish)</li>   
+		    <li>Water, as needed</li>             
+               </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Cleaning the boti is crucial. It often involves washing thoroughly and sometimes pre-boiling to tenderize. Ensure your boti is clean and ready.Cut the boti into small, bite-sized pieces.</p>
+                <p><strong>Step 2:</strong>Heat oil in a heavy-bottomed pot or pressure cooker.Add mustard seeds and cumin seeds. When they splutter, add curry leaves and slit green chilies.Add the finely chopped onions and sauté until golden brown.Add ginger-garlic paste and sauté for a minute until fragrant. </p>
+                <p><strong>Step 3:</strong>Add the finely chopped tomatoes (or tomato puree) and cook until they soften and the oil separates from the masala.Add turmeric powder, red chili powder, coriander powder, and salt. Mix well and cook for a few minutes.   
+ </p>
+	        <p><strong>Step 4:</strong>Add the boti pieces to the pot and mix well with the masala.Add enough water to cover the boti.
+Pressure Cooker:Close the lid and cook for an extended period, as boti requires significant time to tenderize.Allow the pressure to release naturally.Pot:Cover and simmer over low heat until the boti is very tender. This will take much longer than pressure cooking. </p>
+		<p><strong>Step 5:</strong> Once the boti is tender, add garam masala and mix well.If you are using coconut milk or tamarind pulp, add those ingredients near the end of the cooking process, and simmer for a few more minutes.
+Garnish with chopped fresh coriander leaves.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 20 -->
+    <div id="recipe20" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe20')">&times;</div>
+            <div class="modal-header">Recipe 20 masala papad</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>Papad (any variety, like urad dal or moong dal)</li>   
+		    <li>1 medium onion, finely chopped</li>
+		    <li>1 medium tomato, finely chopped</li>  
+		    <li>1/2 cucumber, finely chopped (optional)</li>
+		    <li>1-2 green chilies, finely chopped (adjust to spice preference)</li>   
+		    <li>1/4 cup coriander leaves, finely chopped</li>
+		    <li>1/4 teaspoon red chili powder</li>   
+		    <li>1/4 teaspoon chaat masala</li>  
+		    <li>1/4 teaspoon cumin powder (optional)</li>
+		    <li>Lemon juice, to taste</li>
+		    <li>Salt, to taste</li>
+		   <li>Oil or ghee (for roasting or frying the papad)</li>
+	       </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Roast or Fry the Papad:Roasting:You can roast the papad directly over a gas flame, turning it frequently until it's crispy. Be careful not to burn it.Alternatively, you can roast it in a microwave for a few seconds on each side.   
+Frying:Heat oil or ghee in a pan.Fry the papad until it's golden brown and crispy on both sides.Drain on paper towels to remove excess oil.
+Once the papad is cooked, place it on a plate.</p>
+                <p><strong>Step 2:</strong>Prepare the Topping:In a bowl, combine the finely chopped onions, tomatoes, cucumber (if using), green chilies, and coriander leaves.Add red chili powder, chaat masala, cumin powder (if using), and salt.Squeeze lemon juice over the mixture.
+Mix well.</p>
+                <p><strong>Step 3:</strong>Assemble the Masala Papad:Immediately before serving, spoon the vegetable topping evenly over the crispy papad.Serve immediately to prevent the papad from becoming soggy.Tips and Variations:Spice Level: Adjust the amount of green chilies and red chili powder to your taste.Vegetables: You can add other vegetables like grated carrots, bell peppers, or boiled potatoes.   
+Garnishes: You can garnish with sev (crispy gram flour noodles) or grated cheese for added texture and flavor.Chutneys: A drizzle of tamarind chutney or mint chutney can add a tangy or spicy kick.Quick Version: if you do not have fresh vegetables, a pinch of chaat masala, red chilli powder, and some lemon juice can be added to the papad directly.Presentation: Break the papad into quarters or smaller pieces for easier serving.Timing: Assemble the masala papad just before serving, as the moisture from the vegetables will soften the papad.Sources and related content
+</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Recipe 21 -->
+    <div id="recipe21" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe21')">&times;</div>
+            <div class="modal-header">Recipe 21 bagara rice</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+		    <li>1 cup Basmati rice (or any long-grained rice)</li>   
+		    <li>2 tablespoons ghee (clarified butter) or oil</li>   
+		    <li>1 small bay leaf</li>   
+		    <li>1-inch cinnamon stick</li>   
+		    <li>3-4 green cardamom pods</li>
+		    <li>3-4 cloves</li>
+		    <li>½ teaspoon shahi jeera (caraway seeds)</li>   
+		    <li>1 medium onion, thinly sliced</li>   
+		    <li>1-2 green chilies, slit (adjust to your spice preference)</li>
+		    <li>1 teaspoon ginger-garlic paste (or ½ tsp each of grated ginger and garlic)</li>   
+		    <li>2-3 tablespoons chopped mint leaves (pudina)</li>   
+		    <li>2-3 tablespoons chopped coriander leaves (kothimir)</li>
+		    <li>½ teaspoon salt (adjust to taste)</li>   
+		    <li>1 ¾ cups water (for pressure cooker; adjust for other cooking methods)</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the Rice:Rinse the Basmati rice thoroughly 2-3 times under cold water until the water runs clear. This helps remove excess starch and prevents the rice from becoming sticky.Soak the rinsed rice in enough water for at least 30 minutes. Soaking helps the rice cook evenly and makes the grains fluffier. After soaking, drain the water completely.</p>
+                <p><strong>Step 2:</strong>Temper the Spices:Heat ghee or oil in a heavy-bottomed pot or pressure cooker over medium heat. Using ghee adds a rich, traditional flavor.Once the ghee is hot, add the whole spices: bay leaf, cinnamon stick, cardamom pods, cloves, and shahi jeera. Sauté for a few seconds until they become fragrant. Be careful not to burn them, as this can make the rice bitter.</p>
+                <p><strong>Step 3:</strong>Sauté Aromatics:Add the thinly sliced onions to the pot and sauté them until they turn light golden brown or translucent. This step is crucial for flavor development. Don't rush this process.Add the slit green chilies and ginger-garlic paste. Sauté for another minute until the raw smell of ginger and garlic disappears.</p>
+		<p><strong>Step 4:</strong>Add Herbs and Rice:Add the chopped mint and coriander leaves to the pot. Sauté for about a minute until the herbs wilt and release their aroma.Add the drained rice to the pot and gently sauté for 1-2 minutes. This helps the rice absorb the flavors of the spices and prevents it from breaking.</p>
+		<p><strong>Step 5:</strong>Add Water and Salt:Pour in the measured amount of water and add salt to taste. Mix well.
+Taste the water – it should be slightly salty. Adjust the salt if needed.</p>
+		<p><strong>Step 6:</strong> Cook the Rice:Pressure Cooker Method: Close the lid of the pressure cooker and cook on high heat until it whistles twice. Then, reduce the heat to low and cook for another 5 minutes. Allow the pressure to release naturally before opening the lid.
+Stovetop Pot Method: Bring the water to a boil. Once boiling, reduce the heat to low, cover the pot tightly with a lid, and let it simmer for 15-20 minutes, or until all the water is absorbed and the rice is cooked through. Avoid lifting the lid frequently to prevent steam from escaping.
+Instant Pot Method: Press the "Sauté" button and follow steps 2-4. Then, add water and salt. Press "Cancel." Add the drained rice. Close the lid and set the valve to "Sealing." Select "Pressure Cook" (or "Manual") and set the timer for 6 minutes at high pressure. Allow a natural pressure release for 10 minutes, then do a quick release of any remaining pressure.</p>
+		<p><strong>Step 7:</strong>Rest and Fluff:Once the rice is cooked, let it rest for 5-10 minutes with the lid closed. This allows the steam to settle and the grains to become fluffy.
+Gently fluff the rice with a fork before serving.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal for Recipe 22 -->
+    <div id="recipe22" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe22')">&times;</div>
+            <div class="modal-header">Recipe 22 mashrooms curry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>250g mushrooms, sliced or quartered</li>
+		    <li>1 large onion, finely chopped</li>
+		    <li>1-2 tomatoes, finely chopped or pureed</li>
+		    <li>1 tablespoon ginger-garlic paste</li>
+		    <li>1 teaspoon turmeric powder</li>
+		    <li>1 teaspoon red chili powder (adjust to your spice preference)</li>
+		    <li>1 teaspoon coriander powder</li>   
+		    <li>½ teaspoon cumin powder</li>   
+		    <li>½ teaspoon garam masala</li>   
+		    <li>Salt to taste</li>
+		    <li>2-3 tablespoons cooking oil</li>
+		    <li>Fresh coriander leaves, chopped for garnish</li>  
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong> Prepare the Mushrooms: Wash the mushrooms gently and slice or quarter them as desired.</p>
+                <p><strong>Step 2:</strong> Sauté Aromatics: Heat oil in a pan over medium heat. If using, add whole spices and let them splutter. Add the chopped onions and sauté until golden brown (about 5-7 minutes).</p>
+                <p><strong>Step 3:</strong>Add Ginger-Garlic: Stir in the ginger-garlic paste and sauté for another minute until the raw smell disappears.</p>
+		<p><strong>Step 4:</strong>Cook Tomatoes: Add the chopped tomatoes or tomato puree. Cook until the tomatoes soften and the oil starts to separate from the mixture.
+</p>
+		<p><strong>Step 5:</strong>Add Spice Powders: Lower the heat and add turmeric powder, red chili powder, coriander powder, cumin powder, and salt. Mix well and sauté for a minute. Add a tablespoon of water if the mixture seems too dry to prevent the spices from burning.</p>
+		<p><strong>Step 6:</strong>Add Mushrooms: Add the sliced mushrooms to the pan and mix well with the spice mixture. Cook for 5-7 minutes, stirring occasionally, until the mushrooms release their water and start to soften.</p>
+		<p><strong>Step 7:</strong>Make the Gravy (Optional): If you prefer a gravy consistency, add ½ cup of water or coconut milk. Bring the curry to a simmer, then cover the pan and cook for another 5-10 minutes until the mushrooms are cooked through and the gravy has thickened to your desired consistency.</p>
+		<p><strong>Step 8:</strong>Finish and Garnish: Stir in the garam masala and chopped coriander leaves. Cook for another minute. </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 23 -->
+    <div id="recipe23" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe23')">&times;</div>
+            <div class="modal-header">Recipe 23 hallem</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1/2 cup broken wheat (dalia)</li>   
+		    <li>1/4 cup chana dal (split chickpeas)</li> 
+		    <li> 1/4 cup masoor dal (split red lentils)</li> 
+	            <li>1/4 cup moong dal (split yellow lentils)</li> 
+		    <li>(Some recipes may also include barley or rice)</li>
+                    <li>2-3 large onions, thinly sliced</li> 
+		    <li>2-3 tablespoons ginger-garlic paste</li> 
+	            <li>4-6 green chilies, slit</li> 
+		    <li>A handful of fresh coriander leaves, chopped</li> 
+		    <li>A handful of fresh mint leaves, chopped</li> 
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the Grains and Lentils:Wash the broken wheat and lentils thoroughly.Soak them together in enough water for at least 2-4 hours, or preferably overnight. This helps them cook faster and blend better.</p>
+                <p><strong>Step 2:</strong>Cook the Meat:In a large, heavy-bottomed pot or pressure cooker, heat ghee or oil.   
+Add the whole spices (bay leaves, cinnamon sticks, cardamom pods, cloves, peppercorns) and sauté until fragrant.
+Add the sliced onions and sauté until golden brown. Reserve some fried onions for garnishing.   
+Add the ginger-garlic paste and green chilies. Sauté for a minute until the raw smell disappears.   
+Add the meat pieces and cook on high heat until they are browned on all sides.
+Add the powdered spices (turmeric powder, red chili powder, coriander powder, cumin powder) and salt. Mix well and cook for a few minutes.
+Add enough water or broth to cover the meat and cook until the meat is tender. This may take longer on a stovetop (1-2 hours) or less in a pressure cooker (around 15-20 minutes after the first whistle).Once the meat is cooked, remove it from the pot and shred it using two forks or your hands. Set aside. Strain the broth and keep it.</p>
+                <p><strong>Step 3:</strong>Cook the Grains and Lentils:Drain the soaked broken wheat and lentils.
+In the same pot (or a clean pot), add the soaked grains and lentils.Add the strained meat broth and add more water if needed to ensure the grains and lentils are fully submerged.Bring to a boil, then reduce the heat to low, cover, and simmer until the grains and lentils are very soft and mushy (about 1-1.5 hours on the stovetop, or fewer whistles in a pressure cooker). Stir occasionally to prevent sticking. ...</p>
+		<p><strong>Step 4:</strong>Combine and Mash:Once the grains and lentils are cooked, use a hand blender or a wooden masher (ghota) to blend the mixture until it becomes a smooth, thick paste-like consistency. You should still see some texture from the grains.Add the shredded meat back to the pot.
+Stir in the garam masala, chopped coriander leaves, and chopped mint leaves.Add more of the reserved meat broth or hot water if the haleem is too thick. The consistency should be thick but still slightly flowing.Simmer on low heat for another 15-20 minutes, stirring frequently to allow the flavors to meld together.</p>
+		<p><strong>Step 5:</strong>Temper with Ghee (Optional but Recommended):In a small pan, heat some ghee. You can optionally add a few sliced onions or garlic to the ghee for extra flavor and then remove them once browned.Pour the hot ghee over the haleem.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 24 -->
+    <div id="recipe24" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe24')">&times;</div>
+            <div class="modal-header">Recipe 24 peppar chicken fry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>500g boneless or bone-in chicken pieces, cleaned and cut into medium size
+		    <li>2 tablespoons black peppercorns, freshly crushed (adjust to your spice preference)</li>
+		    <li>1 large onion (ullipayalu), finely chopped</li>
+		    <li>1 tablespoon ginger-garlic paste (allam vellulli mudda)</li>
+		    <li>1-2 green chilies (pachi mirapakayalu), slit (optional)</li>
+		    <li>1 teaspoon turmeric powder (pasupu)</li>
+		    <li>1 teaspoon cumin seeds (jeelakarra)</li>   
+		    <li>1 teaspoon fennel seeds </li>   
+		    <li>1 sprig curry leaves (karivepaku)
+		    <li>2-3 tablespoons cooking oil (nune)</li>
+		    <li>Salt (uppu) to taste</li>
+		    <li>Fresh coriander leaves (dhaniyalu), chopped, for garnish</li>  
+		    <li>Lemon wedges (nimma pandu chekkalu), for serving (optional)Ingredient X</li>
+                    <li>Ingredient Y</li>
+                    <li>Ingredient Z</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Marinate the Chicken:
+In a bowl, combine the chicken pieces with half of the crushed black pepper, turmeric powder, ginger-garlic paste, and salt.
+Mix well to ensure the chicken is evenly coated with the marinade.
+Let it marinate for at least 20-30 minutes. If you have time, you can marinate it for a longer period in the refrigerator. </p>
+                <p><strong>Step 2:</strong>Temper the Spices:
+Heat cooking oil in a heavy-bottomed pan or a kadai over medium heat.   
+Once the oil is hot, add cumin seeds and fennel seeds. Let them splutter for a few seconds.
+Add curry leaves and slit green chilies (if using). Sauté for a few seconds until the curry leaves become fragrant. ...</p>
+                <p><strong>Step 3:</strong>Sauté the Onions:Add the finely chopped onions to the pan and sauté them until they turn golden brown.</p>
+		<p><strong>Step 4:</strong>Cook the Chicken:Add the marinated chicken pieces to the pan.
+Stir well to mix the chicken with the sautéed onions and spices.Cook on medium-high heat for about 5-7 minutes, stirring occasionally, until the chicken starts to brown slightly.</p>
+		<p><strong>Step 5:</strong>Add Remaining Pepper and Cook:Add the remaining crushed black pepper to the chicken.Mix well and continue to cook on medium-low heat, covered, until the chicken is cooked through and the moisture has mostly evaporated. This will take about 15-20 minutes, depending on the size of the chicken pieces. Stir occasionally to prevent sticking.If you prefer a drier fry, you can cook it for a few more minutes uncovered on medium-high heat, stirring continuously until the desired consistency is reached.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 25 -->
+    <div id="recipe25" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe25')">&times;</div>
+            <div class="modal-header">Recipe 25 khuska</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 cup Basmati rice (or other long-grain rice), soaked for at least 30 minutes</li>  
+		    <li>1-2 tablespoons ghee or oil (or a combination)</li>   
+		    <li>1 medium-sized onion, thinly sliced</li>
+	            <li>1 teaspoon ginger-garlic paste</li>
+		    <li>1/2 - 1 cup chopped tomatoes</li>
+		    <li>1-3 green chilies, slit (adjust to your spice preference)</li>
+		    <li>1/4 - 1/2 cup plain yogurt (dahi or curd), whisked (optional, but adds creaminess)</li>
+		    <li>1/4 teaspoon turmeric powder</li>
+		    <li>1/2 - 1 teaspoon red chili powder (optional)</li>
+		    <li>1/2 - 1 teaspoon biryani masala or garam masala (optional, for extra flavor)</li>
+		    <li>A few sprigs of mint leaves, chopped</li>   
+		    <li>A few sprigs of coriander leaves, chopped</li>   
+		    <li>Whole spices:</li>
+		    <li>1 bay leaf</li>   
+		    <li>1-inch cinnamon stick</li>
+		    <li>2-4 green cardamom pods</li>
+		    <li>3-5 cloves</li>
+	            <li>1/2 teaspoon cumin seeds or shahi jeera (black cumin)</li>   
+		    <li>1 star anise (optional)</li>   
+		    <li>A small piece of nutmeg, grated (optional)</li>
+                   
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the Rice: Wash the basmati rice thoroughly and soak it in enough water for at least 30 minutes. Drain the water completely and set the rice aside.</p>
+                <p><strong>Step 2:</strong>Sauté Aromatics: Heat ghee or oil in a heavy-bottomed pot or pressure cooker over medium heat. Add the whole spices (bay leaf, cinnamon, cardamom, cloves, cumin seeds, star anise if using) and let them splutter for a few seconds. </p>
+                <p><strong>Step 3:</strong>Sauté Onions: Add the sliced onions and sauté them until they turn golden brown.</p>
+		<p><strong>Step 4:</strong>Add Ginger-Garlic and Green Chilies: Stir in the ginger-garlic paste and slit green chilies. Sauté for another minute until the raw smell of ginger-garlic disappears. </p>
+                <p><strong>Step 5:</strong>Cook Tomatoes: Add the chopped tomatoes and cook until they soften and become mushy. </p>
+                <p><strong>Step 6:</strong>Add Yogurt and Spices (Optional): If using yogurt, lower the heat and add the whisked yogurt. Stir continuously to prevent curdling. Then, add turmeric powder, red chili powder (if using), and biryani masala/garam masala (if using). Cook for a minute until the oil starts to separate from the mixture. </p>
+		<p><strong>Step 7:</strong>Add Herbs: Stir in the chopped mint and coriander leaves. </p>
+                <p><strong>Step 8:</strong>Add Rice and Water: Add the soaked and drained rice to the pot. Gently mix it with the spice mixture for a minute or two. Pour in the required amount of water and add salt to taste. Bring the water to a boil. </p>
+                <p><strong>Step 9:</strong>Cook the Rice:
+Pressure Cooker Method: Close the lid of the pressure cooker and cook for 1-2 whistles on medium heat. Let the pressure release naturally before opening the lid.   
+Open Pot Method: Reduce the heat to low, cover the pot tightly, and let the rice cook for about 15-20 minutes, or until all the water is absorbed and the rice is cooked through. Ensure the rice doesn't stick to the bottom.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 26 -->
+    <div id="recipe26" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe26')">&times;</div>
+            <div class="modal-header">Recipe 26 pudina pulao</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+		    <li>1 cup fresh Mint Leaves (Pudina), tightly packed</li>   
+		    <li>1/2 cup fresh Coriander Leaves (Dhania), optional, but adds flavor</li>  
+		    <li>2-4 Green Chillies (Hari Mirch), adjust to your spice preference</li>  
+		    <li>1 inch Ginger (Adrak)</li>     
+		    <li>3-4 cloves Garlic (Lehsun)</li>     
+		    <li>1/4 cup Water (for grinding)</li>
+		    <li>1.5 cups Basmati Rice</li>  
+		    <li>2 tablespoons Oil or Ghee (Clarified Butter)</li>  
+		    <li>1 teaspoon Cumin Seeds (Jeera)</li>     
+		    <li>1 Bay Leaf (Tej Patta)</li>     
+		    <li>2 Green Cardamoms (Elaichi)</li>     
+		    <li>2 Cloves (Laung)</li>     
+		    <li>1 inch Cinnamon Stick (Dalchini)</li>  
+		    <li>1 Star Anise (Chakra Phool), optional</li>     
+		    <li>1 medium Onion, thinly sliced</li>     
+		    <li>1/2 cup mixed Vegetables, chopped (e.g., carrots, peas, beans, potatoes - optional)</li>  
+		    <li>1/4 teaspoon Turmeric Powder (Haldi)</li>     
+		    <li>1/2 teaspoon Garam Masala</li>     
+		    <li>Salt to taste</li>  
+		    <li>2.5 - 3 cups Water or Vegetable Broth (adjust based on rice and cooking method)</li>  
+		    <li>1 tablespoon Lemon Juice</li>  
+		    <li>Fresh Mint Leaves, for garnish</li>    
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong> Prepare the Rice:Rinse the Basmati rice thoroughly under cold running water until the water runs clear. This removes excess starch and prevents the rice from becoming sticky.Soak the rice in water for at least 20-30 minutes. Drain the water completely before cooking.</p>
+                <p><strong>Step 2:</strong> Make the Mint Paste:In a blender or grinder, combine the fresh mint leaves, coriander leaves (if using), green chillies, ginger, and garlic.Add a little water (about 1/4 cup) to help grind the ingredients into a smooth paste. Set aside. </p>
+                <p><strong>Step 3:</strong>Sauté the Aromatics (Tempering):Heat oil or ghee in a heavy-bottomed pan or pressure cooker over medium heat.Once the oil is hot, add the cumin seeds and let them splutter.Add the whole spices: bay leaf, green cardamoms, cloves, cinnamon stick, and star anise (if using). Sauté for a few seconds until fragrant.Add the thinly sliced onions and sauté until they turn translucent or light golden brown.</p>
+		<p><strong>Step 4:</strong>Add the chopped mixed vegetables (if using) to the pressure cooker and sauté for 2-3 minutes.
+* Stir in the prepared mint paste and cook for 2-3 minutes, stirring continuously.
+* Add the turmeric powder and garam masala. Mix well.
+* Add the soaked and drained rice to the cooker. Gently sauté for 1 minute.
+* Pour in the water or vegetable broth and add salt to taste. Stir gently. 
+* Close the lid of the pressure cooker and cook for 2 whistles on medium heat.
+* Once the pressure cooker has released 2 whistles, turn off the heat and allow the pressure to release naturally.</p>
+                <p><strong>Step 5:</strong>Finish and Serve:Once the rice is cooked, let it rest for 5-10 minutes before opening the lid (for pan cooking) or after the pressure has released (for pressure cooker). This allows the flavors to meld and the rice grains to firm up.   
+Gently fluff the pulao with a fork.Stir in the lemon juice.Garnish with fresh mint leaves.Serve the hot Pudina Pulao with raita (yogurt dip), a simple salad, or a side of pickle.</p>
+                  
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 27 -->
+    <div id="recipe27" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe27')">&times;</div>
+            <div class="modal-header">Recipe 27 jeera rice</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    
+                    <li>1 cup Basmati Rice</li>
+		    <li>1.5 to 2 cups Water (adjust based on cooking method and rice type)</li>
+                    <li>1 tablespoon Ghee (clarified butter) or Oil</li>
+                    <li>1-2 teaspoons Cumin Seeds (Jeera)</li>
+		    <li>1 Bay Leaf (Tej Patta) - optional</li>
+		    <li>2 Green Cardamom Pods (Elaichi) - optional, lightly bruised</li>
+                    <li>2 Cloves (Laung) - optional</li>
+                    <li>1 inch Cinnamon Stick (Dalchini) - optional</li>
+		    <li>Salt to taste</li>
+		    <li>1-2 tablespoons chopped fresh Coriander Leaves (Dhania), for garnish (optional)</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare the Rice:
+* Rinse: Gently rinse the Basmati rice 2-3 times under cold running water until the water runs relatively clear. This removes excess starch and helps prevent the rice from becoming sticky.
+* Soak: Soak the rinsed rice in enough water to cover it for at least 20-30 minutes. This helps the rice grains cook evenly and elongate. Drain the water completely after soaking.   
+
+</p>
+                <p><strong>Step 2:</strong>Temper the Spices (Tadka):
+* Heat the ghee or oil in the pot or pressure cooker over medium heat.
+* Once the ghee/oil is hot (but not smoking), add the cumin seeds. Let them sizzle and turn golden brown for a few seconds. Be careful not to burn them, as this will make them bitter.
+* If using, add the optional whole spices: bay leaf, green cardamom, cloves, and cinnamon stick. Sauté for another 30 seconds until fragrant </p>
+                <p><strong>Step 3:</strong> Add the drained soaked rice to the pressure cooker with the tempered spices.
+* Gently sauté the rice for 1 minute.
+* Pour in the water (usually a 1:1.25 or 1:1.5 rice to water ratio for soaked Basmati rice in a pressure cooker, but this can vary with the cooker and rice type). Add salt to taste.
+* Stir well.
+* Close the lid of the pressure cooker and place the whistle.
+* Cook on medium-high heat for 1-2 whistles (the number of whistles can depend on your specific pressure cooker; consult its manual).
+* After the whistles, turn off the heat and allow the pressure to release naturally. Do not try to force open the lid.
+* Once the pressure has fully released, open the cooker.
+ </p>
+		<p><strong>Step 4:</strong>Fluff and Serve:
+* Once the rice has rested (for pot method) or the pressure has released (for cooker method), gently fluff the Jeera Rice with a fork. This separates the grains.
+* Garnish with freshly chopped coriander leaves, if desired.
+* Serve hot with your favorite Indian curry, dal, or raita.   
+
+ </p>
+                
+
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 28 -->
+    <div id="recipe28" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe28')">&times;</div>
+            <div class="modal-header">Recipe 28 nethalla fry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>250-300 grams Fresh Nethallu (Anchovies)</li>
+                    <li>1 tablespoon Ginger-Garlic Paste</li>
+                    <li>1 - 1.5 teaspoons Red Chilli Powder (adjust to your spice preference</li>
+		    <li>1/2 teaspoon Turmeric Powder</li>
+                    <li>1 teaspoon Coriander Powder (optional)  </li>
+                    <li>1/2 teaspoon Garam Masala (optional)</li>
+		    <li>1-2 tablespoons Rice Flour (for crispiness) </li>
+                    <li>1 tablespoon Corn Flour (optional, for extra crispiness)</li>
+                    <li>Juice of 1/2 Lemon</li>
+                    <li>Salt to taste</li>
+                    <li>A few sprigs of Curry Leaves</li>
+    		    <li>Oil for deep frying or shallow frying</li>   
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Clean the Nethallu (Anchovies):* If the nethallu are not already cleaned, this is the most crucial step. Gently remove the head and pull downwards; this will often remove the intestines as well. Some prefer to keep the heads on, especially for very small anchovies.
+* Rinse the cleaned fish thoroughly under cold running water 3-4 times to remove any sand, scales, or impurities.
+* Drain the water completely. You can pat them dry gently with a paper towel.</p>
+                <p><strong>Step 2:</strong>Marinate the Nethallu:
+* In a mixing bowl, add the cleaned nethallu.
+* Add ginger-garlic paste, red chilli powder, turmeric powder, coriander powder (if using), garam masala (if using), and salt.
+* Squeeze fresh lemon juice over the fish.
+* Add the rice flour and corn flour (if using). These flours help in making the fry crispy and also help the masalas to coat the fish well.
+* Gently mix everything with your hands, ensuring each fish is evenly coated with the masala mixture. Be careful not to break the delicate fish.
+* Let the marinated nethallu rest for at least 20-30 minutes. For a more intense flavor, you can marinate for an hour or even longer in the refrigerator.</p>
+                <p><strong>Step 3:</strong>Heat a few tablespoons of oil in a flat frying pan or tawa over medium heat.
+* Arrange the marinated nethallu in a single layer.
+* Fry for 4-6 minutes on each side, or until golden brown and cooked through. You might need to add a little more oil if the pan becomes too dry.
+* Add curry leaves in the last minute of frying. </p>
+		<p><strong>Step 4:</strong> Serve:
+* Serve the hot and crispy Nethalla Fry as an appetizer with onion rings and lemon wedges on the side.
+* It also pairs excellently as a side dish with rice and sambar, rasam, or dal.</p>            
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Recipe 29 -->
+    <div id="recipe29" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe29')">&times;</div>
+            <div class="modal-header">Recipe 29 egg dum biryani</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>3-4 Eggs</li>
+		    <li>Water for boilingIngredient X</li>
+                    <li>1 cup Basmati Rice</li>
+		    <li>2 cups Water (for cooking rice)</li>
+		    <li>1/2 teaspoon Salt</li>
+		    <li> 1 Bay Leaf or a small piece of Cinnamon (if you have it)</li>
+                    <li>2 tablespoons Oil or Ghee</li>
+		    <li>1 large Onion, thinly sliced or chopped</li>
+		    <li>1 teaspoon Ginger-Garlic Paste</li>
+		    <li>1 small Tomato, chopped (optional, can be skipped)</li>
+		    <li>2 tablespoons Plain Yogurt (Curd/Dahi) - (optional, but adds good flavor/texture)</li>
+		    <li>1/4 teaspoon Turmeric Powder</li>
+		    <li>1/2 to 1 teaspoon Red Chilli Powder (adjust to your spice level)</li>
+		    <li>1.5 - 2 teaspoons Biryani Masala Powder (good quality store-bought is key here)</li>
+		    <li>Salt to taste</li>
+		    <li>1/4 cup Water (approximately, for masala consistency)Ingredient Z</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Prepare Eggs & RiceBoil Eggs: Hard boil the eggs (boil for 8-10 minutes). Peel once cooled and keep aside. You can make light slits on them if desired.Soak Rice: Gently rinse the Basmati rice 2-3 times. Soak in water for 15-20 minutes. Drain.
+Cook Rice: In a pot, add the 2 cups of water, 1/2 tsp salt, and the optional bay leaf/cinnamon. Bring to a boil. Add the drained rice. Cook covered on medium-low heat until the rice is about 80-90% cooked (most water absorbed, rice grains tender but with a slight bite). Remove from heat. If there's any excess water, drain it carefully.</p>
+                <p><strong>Step 2:</strong>Make Simple Egg Masala:While the rice cooks, heat oil/ghee in a separate pan or a heavy-bottomed pot (which can be used for dum later).Add sliced/chopped onions and sauté until light golden brown (about 5-7 minutes).Add ginger-garlic paste and sauté for another minute until the raw smell goes.If using tomatoes, add them now and cook until softened (2-3 minutes).
+Lower the heat. Add turmeric powder, red chilli powder, and biryani masala powder. Sauté for 30 seconds, ensuring spices don't burn.
+If using yogurt, whisk it and add it now, stirring quickly. Cook for a minute.Add about 1/4 cup of water and salt to taste for the masala. Bring to a gentle simmer.Add the boiled eggs to the masala. Gently coat them. Let it simmer for 2-3 minutes until the masala thickens slightly around the eggs. Turn off the heat. </p>
+                <p><strong>Step 3:</strong>Quick Layering & "Dum" Cooking:If you cooked the masala in a different pan, take a heavy-bottomed pot.Layer 1 (Rice): Spread half of the cooked rice at the bottom of the pot.Layer 2 (Egg Masala): Spoon the egg masala with the eggs over the rice.Layer 3 (Rice): Spread the remaining rice on top.Finish: Drizzle the 1/2 tablespoon of ghee or a few drops of oil over the top layer of rice.Seal & Dum: Cover the pot tightly with a lid. To make the seal better for a "dum" effect:
+If your lid has a vent, you can plug it with a small piece of dough or paper.
+You can place a heavy weight on the lid.Alternatively, quickly press a layer of aluminum foil over the pot mouth before putting on the lid if you have it.Cook on the absolute lowest heat for 10-15 minutes. This allows the flavors to steam and meld. Avoid opening the lid. </p>
+		<p><strong>Step 4:</strong>Rest & Serve:Turn off the heat and let the biryani sit covered for at least 5-10 minutes.
+Gently fluff the biryani from the sides.Garnish with optional chopped coriander leaves.Serve hot, as is, or with a simple side of plain yogurt or sliced onions.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Recipe 30 -->
+    <div id="recipe30" class="modal">
+        <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('recipe30')">&times;</div>
+            <div class="modal-header">Recipe 30 snail curry</div>
+            <div class="modal-body">
+                <p><strong>Ingredients:</strong></p>
+                <ul>
+                    <li>1 teaspoon Mustard Seeds</li>
+                    <li>1 teaspoon Cumin Seeds (Jeera)</li>
+                    <li>1 sprig Curry Leaves</li>
+		    <li>2 Green Chillies, slit</li>
+                    <li>1 large Onion, finely chopped</li>
+                    <li>1 tablespoon Ginger-Garlic Paste</li>
+		    <li>1/2 teaspoon Turmeric Powder</li>
+                    <li>1-2 teaspoons Red Chilli Powder</li>
+                    <li>1 teaspoon Coriander Powder</li>
+		    <li>1/2 teaspoon Cumin Powder</li>
+                    <li>1/2 - 1 teaspoon Garam Masala</li>
+                    <li>2 medium Tomatoes, finely chopped or pureed</li>
+		    <li>Salt to taste</li>
+		    <li>1/2 cup Water, or as needed</li>
+		   <li>Fresh Coriander Leaves, chopped</li>
+                </ul>
+                <p><strong>Process:</strong></p>
+                <p><strong>Step 1:</strong>Tempering (Popu/Tadka):Heat oil in a heavy-bottomed pan or kadai over medium heat.
+Once the oil is hot, add mustard seeds. Let them splutter.Add cumin seeds and let them sizzle.
+Add the curry leaves and slit green chillies. Sauté for a few seconds until the curry leaves turn crisp and aromatic.</p>
+                <p><strong>Step 2:</strong>Sauté Aromatics:Add the finely chopped onions to the pan. Sauté until they turn translucent or light golden brown (about 7-10 minutes).Add the ginger-garlic paste and sauté for another 1-2 minutes until the raw smell disappears. </p>
+                <p><strong>Step 3:</strong>Add Spices Add turmeric powder, red chilli powder, coriander powder, and cumin powder (if using). Sauté on low heat for about a minute, stirring continuously, until the spices are fragrant. Be careful not to burn them.</p>
+		<p><strong>Step 4:</strong>Cook Tomatoes:Add the chopped tomatoes (or tomato puree) to the pan. Cook until the tomatoes soften and the oil starts to separate from the masala (about 5-7 minutes). If using tamarind pulp, you can add its extract now.</p>
+                <p><strong>Step 5:</strong>Cook the Snails:Add the cleaned snail meat to the masala. Mix well to coat the snails with the spices.Sauté for 5-7 minutes, allowing the snails to absorb the flavors.Add salt to taste and about 1/2 cup of water (or as needed to achieve your desired gravy consistency). Stir well.</p>
+                <p><strong>Step 6:</strong>Cook the Snails:Add the cleaned snail meat to the masala. Mix well to coat the snails with the spices.Sauté for 5-7 minutes, allowing the snails to absorb the flavors.Add salt to taste and about 1/2 cup of water (or as needed to achieve your desired gravy consistency). Stir well.</p>
+		<p><strong>Step 7:</strong>Finish with Garam Masala & Optional Ingredients:Once the snails are tender and the gravy has thickened to your liking, stir in the garam masala powder.If using coconut milk, add it at this stage and simmer gently for another 2-3 minutes. Do not boil vigorously after adding coconut milk.If using lemon juice (and not tamarind earlier), stir it in after turning off the heat.Check seasoning and adjust salt or spices if needed. </p>
+                <p><strong>Step 8:</strong>Garnish and Serve:Garnish with freshly chopped coriander leaves.Serve hot Snail Curry with steamed rice, idli, dosa, or chapati. In Andhra, it's commonly eaten with rice or ragi sangati.</p>
+        </div>
+    </div>
+ 
+    
+<script>
+function showRecipes() {
+  document.getElementById("recipesContainer").style.display = "flex";
+}
+
+function openModal(id) {
+  const modals = document.getElementsByClassName("modal");
+  for (let i = 0; i < modals.length; i++) {
+    modals[i].style.display = "none";
+  }
+  document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+</script>
+</body>
+
+</html>
+
+
